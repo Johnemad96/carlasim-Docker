@@ -73,7 +73,7 @@ https://stackoverflow.com/questions/49631146/how-do-you-add-a-path-to-pythonpath
 https://pythonspeed.com/articles/activate-virtualenv-dockerfile/ 
 
 ### Carla-related issues
-#### "no import named carla":
+#### "import carla. no module named carla":
 https://stackoverflow.com/a/3402176 
 
 #### "pygame isn't installed", needed virtual environment
