@@ -16,22 +16,23 @@ $ docker exec -it carla_docker_full bash
 ```
 
 ## Noteslinks used while solving issues/error faced
-### quick fix (DYI by attaching vscode to the running container and edit the code)
-When facing this issue, in manual_control.py (found in ~/PythonAPI/examples/) or other scripts. 
+### Quick code fix (DYI)
+When facing the following issue issue, in manual_control.py (found in ~/PythonAPI/examples/) or other scripts. 
+Open the code with the issue by attaching vscode to the running container and edit the code.
 This issue is a font list issue, not important. We can just set it to any default known fonts.
-```sh 
+```
 File "./manual_control.py", line 611, in <listcomp> 
 fonts = [x for x in pygame.font.get_fonts() if font_name in x] 
 TypeError: argument of type 'NoneType' is not iterable 
 ```
 open the code file at the line (here, it is 611)
 change the following code to the latter code
-```sh
+```python
 fonts = [x for x in pygame.font.get_fonts() if font_name in x] 
 default_font = 'ubuntumono' 
 mono = default_font if default_font in fonts else fonts[0] 
 ```
-```sh 
+```python
 #fonts = [x for x in pygame.font.get_fonts() if font_name in x] 
 default_font = 'ubuntumono' 
 mono = default_font #if default_font in fonts else fonts[0] 
