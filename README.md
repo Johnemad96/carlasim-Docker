@@ -40,8 +40,8 @@ File "./manual_control.py", line 611, in <listcomp>
 fonts = [x for x in pygame.font.get_fonts() if font_name in x] 
 TypeError: argument of type 'NoneType' is not iterable 
 ```
-open the code file at the line (here, it is 611)
-change the following code to the latter code
+open the code file at the line (here, it is 611).
+Modify the following code to match the latter code
 ```python
 fonts = [x for x in pygame.font.get_fonts() if font_name in x] 
 default_font = 'ubuntumono' 
@@ -52,6 +52,8 @@ mono = default_font if default_font in fonts else fonts[0]
 default_font = 'ubuntumono' 
 mono = default_font #if default_font in fonts else fonts[0] 
 ```
+source: 
+https://github.com/carla-simulator/carla/issues/1475#issuecomment-568145522
 ### Dockerfile image-related issues
 #### To edit and install as root
 https://stackoverflow.com/questions/32576928/how-to-install-new-packages-into-non-root-docker-container 
@@ -63,6 +65,12 @@ https://github.com/NVIDIA/nvidia-docker/issues/1631#issuecomment-1112682423
 
 #### display issues ("xdg-user-dir" and "XDG_RUNTIME_DIR")
 https://github.com/carla-simulator/carla/issues/1892#issuecomment-717263547 
+
+#### Add python path to environment in Dockerfile
+https://stackoverflow.com/questions/49631146/how-do-you-add-a-path-to-pythonpath-in-a-dockerfile 
+
+#### Activate Virtual Environment in Dockerfile
+https://pythonspeed.com/articles/activate-virtualenv-dockerfile/ 
 
 ### Carla-related issues
 #### "no import named carla":
