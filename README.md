@@ -6,6 +6,7 @@ and fixing most missing dependencies issues (with the links to the solution of e
 Official Carla 0.9.12 Documentation and Github:
 
 https://carla.readthedocs.io/en/0.9.12/
+
 https://github.com/carla-simulator/carla/tree/0.9.12
 
 Docker Version: 20.10.12
