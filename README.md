@@ -6,7 +6,15 @@ Official Carla 0.9.12 Documentation and Github
 https://carla.readthedocs.io/en/0.9.12/
 https://github.com/carla-simulator/carla/tree/0.9.12
 
-# Commands to run carlasim
+
+# Commands Needed 
+## To Build The Docker image
+```sh
+# go to the directory of the Dockerfile
+# docker build -t <image_name> .
+docker build -t carladockertest .
+```
+## to run carlasim
 ```sh
 # To run the container (add sudo if needed)
 $ docker run --privileged --gpus all --net=host -it -e DISPLAY=$DISPLAY --name carla_docker_full carladockertest:latest
