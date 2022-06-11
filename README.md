@@ -4,7 +4,7 @@ this Dockerfile creates a ready to go Carla Simulator Image by pulling the offic
 and fixing the most missing dependencies issues (with the links to the solution of each issue I faced).
 
 # Commands to run carlasim
-'''sh
+```sh
 # To run the container (add sudo if needed)
 $ docker run --privileged --gpus all --net=host -it -e DISPLAY=$DISPLAY --name carla_docker_full carladockertest:latest
 
@@ -13,29 +13,29 @@ $ ./CarlaUE4.sh
 
 # to open another shell for the same container (to run scripts, etc...)
 $ docker exec -it carla_docker_full bash
-'''
+```
 
 ## Noteslinks used while solving issues/error faced
 ### quick fix (DYI by attaching vscode to the running container and edit the code)
 When facing this issue, in manual_control.py (found in ~/PythonAPI/examples/) or other scripts. 
 This issue is a font list issue, not important. We can just set it to any default known fonts.
-'''sh 
+```sh 
 File "./manual_control.py", line 611, in <listcomp> 
 fonts = [x for x in pygame.font.get_fonts() if font_name in x] 
 TypeError: argument of type 'NoneType' is not iterable 
-'''
+```
 open the code file at the line (here, it is 611)
 change the following code to the latter code
-'''sh
+```sh
 fonts = [x for x in pygame.font.get_fonts() if font_name in x] 
 default_font = 'ubuntumono' 
 mono = default_font if default_font in fonts else fonts[0] 
-'''
-'''sh 
+```
+```sh 
 #fonts = [x for x in pygame.font.get_fonts() if font_name in x] 
 default_font = 'ubuntumono' 
 mono = default_font #if default_font in fonts else fonts[0] 
-'''
+```
 ### Dockerfile image-related issues
 #### To edit and install as root
 https://stackoverflow.com/questions/32576928/how-to-install-new-packages-into-non-root-docker-container 
