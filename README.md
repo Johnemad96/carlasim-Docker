@@ -2,6 +2,9 @@
 
 this Dockerfile creates a ready to go Carla Simulator Image by pulling the official (0.9.12) Dockerhub image of Carla Simulator (carlasim/carla:0.9.12)
 and fixing the most missing dependencies issues (with the links to the solution of each issue I faced).
+Official Carla 0.9.12 Documentation and Github
+https://carla.readthedocs.io/en/0.9.12/
+https://github.com/carla-simulator/carla/tree/0.9.12
 
 # Commands to run carlasim
 ```sh
