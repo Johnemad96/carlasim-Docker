@@ -30,7 +30,7 @@ $ ./CarlaUE4.sh
 $ docker exec -it carla_docker_full bash
 ```
 
-## Noteslinks used while solving issues/error faced
+## Noteslinks used while solving issues/errors faced
 ### Quick code fix (DYI)
 When facing the following issue issue, in manual_control.py (found in ~/PythonAPI/examples/) or other scripts. 
 Open the code with the issue by attaching vscode to the running container and edit the code.
