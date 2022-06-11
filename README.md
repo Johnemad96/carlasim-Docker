@@ -12,7 +12,7 @@ https://github.com/carla-simulator/carla/tree/0.9.12
 ```sh
 # go to the directory of the Dockerfile
 # docker build -t <image_name> .
-docker build -t carladockertest .
+$ docker build -t carladockertest .
 ```
 ## to run carlasim
 ```sh
@@ -67,5 +67,5 @@ https://stackoverflow.com/a/3402176
 #### "pygame isn't installed", needed virtual environment
 https://antc2lt.medium.com/carla-on-ubuntu-20-04-with-docker-5c2ccdfe2f71 
 
-#### Some missing dependencies are mention here
+#### Some missing dependencies are mentioned here
 https://github.com/carla-simulator/carla/issues/3164#issuecomment-669894623
