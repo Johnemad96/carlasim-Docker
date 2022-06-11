@@ -53,8 +53,13 @@ mono = default_font #if default_font in fonts else fonts[0]
 https://stackoverflow.com/questions/32576928/how-to-install-new-packages-into-non-root-docker-container 
 https://stackoverflow.com/questions/32486779/apt-add-repository-command-not-found-error-in-dockerfile 
 
+#### Dockerfile nvidia / cuda error
+When running (```$ apt-get update```) inside Dockerfile, it gives a "GPG error" related to nvidia and cuda "missing key"
+https://github.com/NVIDIA/nvidia-docker/issues/1631#issuecomment-1112682423
+
 #### display issues ("xdg-user-dir" and "XDG_RUNTIME_DIR")
 https://github.com/carla-simulator/carla/issues/1892#issuecomment-717263547 
+
 ### Carla-related issues
 #### "no import named carla":
 https://stackoverflow.com/a/3402176 
