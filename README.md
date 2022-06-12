@@ -60,7 +60,7 @@ https://stackoverflow.com/questions/32576928/how-to-install-new-packages-into-no
 https://stackoverflow.com/questions/32486779/apt-add-repository-command-not-found-error-in-dockerfile 
 
 #### Dockerfile nvidia / cuda error
-When running (```$ apt-get update```) inside Dockerfile, it gives a "GPG error" related to nvidia and cuda "missing key"
+When running "```$ apt-get update```" inside Dockerfile (while building), it gives a "GPG error" related to nvidia and cuda "missing key"
 https://github.com/NVIDIA/nvidia-docker/issues/1631#issuecomment-1112682423
 
 #### display issues ("xdg-user-dir" and "XDG_RUNTIME_DIR")
