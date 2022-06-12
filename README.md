@@ -32,7 +32,7 @@ $ docker exec -it carla_docker_full bash
 
 ## Notes and links used while solving issues/errors faced
 ### Quick code fix (DYI)
-When facing the following issue issue, in manual_control.py (found in ~/PythonAPI/examples/) or other scripts. 
+When facing the following issue , in manual_control.py or other scripts (found in ~/PythonAPI/examples/). 
 Open the code with the issue by attaching vscode to the running container and edit the code.
 This issue is a font list issue, not important. We can just set it to any default known fonts.
 ```
