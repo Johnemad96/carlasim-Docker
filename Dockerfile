@@ -28,11 +28,6 @@ RUN apt-get install libjpeg8-dev -y \
 RUN apt-get install xdg-user-dirs -y \
 && apt-get install xdg-utils -y
 
-# Scenario Runner (From their Dockerfile)
-# RUN pip3 install --user setuptools==46.3.0 wheel==0.34.2 && pip3 install py_trees==0.8.3 networkx==2.2 \
-#     six==1.14.0 numpy==1.18.4 psutil==5.7.0 shapely==1.7.0 xmlschema==1.1.3 ephem==3.7.6.0 tabulate==0.8.7
-
-
 WORKDIR /home/carla
 RUN wget "https://github.com/carla-simulator/scenario_runner/archive/refs/tags/v0.9.12.tar.gz"
 RUN tar -xf v0.9.12.tar.gz 
@@ -67,6 +62,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 # ENV CONDA_DIR /opt/conda
 # RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
 #      /bin/bash ~/miniconda.sh -b -p /opt/conda
+
 
 # # Put conda in path so we can use conda activate
 # ENV PATH=$CONDA_DIR/bin:$PATH
