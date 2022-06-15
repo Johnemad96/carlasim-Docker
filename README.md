@@ -16,18 +16,32 @@ Docker Version: 20.10.12
 ```sh
 # go to the directory of the Dockerfile
 # docker build -t <image_name> .
-$ docker build -t carladockertest .
+$ docker build -t carladockertest:withscenariorunner .
 ```
 ## To run carlasim
 ```sh
 # To run the container (add sudo if needed)
-$ docker run --privileged --gpus all --net=host -it -e DISPLAY=$DISPLAY --name carla_docker_full carladockertest:latest
+# there is an empty scripts folder if you want to mount it to a local folder by adding the following flag before --name flag
+#            -v <folder/on/your/local/machine:/home/carla/scripts>
+$ docker run --privileged --gpus all --net=host -it -e DISPLAY=$DISPLAY --name carla_with_scenariorunner carladockertest:withscenariorunner
 
 # To run Carla 0.9.12 (Within the Container ofc)
 $ ./CarlaUE4.sh
 
 # to open another shell for the same container (to run scripts, etc...)
-$ docker exec -it carla_docker_full bash
+$ docker exec -it carla_with_scenariorunner bash
+
+```
+## To test scenario runner
+```sh
+# in a new shell for the same container (after runnung ./CarlaUE4.sh)
+$ cd scenario_runner-0.9.12/
+
+# run scenario runner test (from the documentation)
+$ python3 scenario_runner.py --scenario FollowLeadingVehicle_1 --reloadWorld
+
+# run manual_control.py (from the same folder)
+$ python3 manual_control.py
 ```
 
 ## Notes and links used while solving issues/errors faced
@@ -81,3 +95,16 @@ https://antc2lt.medium.com/carla-on-ubuntu-20-04-with-docker-5c2ccdfe2f71
 
 #### Some missing dependencies are mentioned here
 https://github.com/carla-simulator/carla/issues/3164#issuecomment-669894623
+
+
+### Scenario Runner issues
+#### Unicode error
+"UnicodeEncodeError: 'ascii' codec can't encode character '\u2713' in position 58: ordinal not in range(128)"
+
+https://github.com/carla-simulator/scenario_runner/blob/master/Docs/FAQ.md
+
+#### No module named examples.manual_control
+getting the following error "Traceback (most recent call last): File "manual_control.py", line 58, in <module> from examples.manual_control import (World, HUD, KeyboardControl, CameraManager, ImportError: No module named examples.manual_control" 
+When running manual_control.py, but the one inside the scenario runner folder
+
+https://github.com/carla-simulator/scenario_runner/issues/717#issuecomment-800070859
