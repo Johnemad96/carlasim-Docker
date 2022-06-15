@@ -58,21 +58,6 @@ ENV VIRTUAL_ENV=/venv/bin/activate
 RUN python3 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
-# # install conda, create env and install pygame and xmlschema
-# ENV CONDA_DIR /opt/conda
-# RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
-#      /bin/bash ~/miniconda.sh -b -p /opt/conda
-
-
-# # Put conda in path so we can use conda activate
-# ENV PATH=$CONDA_DIR/bin:$PATH
-# RUN conda create --no-default-packages -n carlaenv python=3.7 
-# # RUN conda install -n carlaenv xmlschema
-# # RUN conda install -n carlaenv pygame
-
-# SHELL ["conda", "run", "-n", "carlaenv", "/bin/bash", "-c"]
-
-#it should display (python 3.7)
 # RUN pip3 --version 
 RUN pip3 install pygame numpy 
 RUN pip3 install wheel
