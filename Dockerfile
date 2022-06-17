@@ -62,6 +62,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip3 install pygame numpy 
 RUN pip3 install wheel
 RUN pip3 install py_trees==0.8.3 networkx==2.2 six==1.14.0 psutil==5.7.0 shapely==1.7.0 xmlschema==1.1.3 ephem==3.7.6.0 tabulate==0.8.7 simple_watchdog_timer
+RUN pip3 install matplotlib scipy
 
 USER carla
 WORKDIR /home/carla
