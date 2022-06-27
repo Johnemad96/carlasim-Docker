@@ -16,20 +16,20 @@ Docker Version: 20.10.12
 ```sh
 # go to the directory of the Dockerfile
 # docker build -t <image_name> .
-$ docker build -t carladockertest:withscenariorunner .
+$ docker build -t carladockertest:latest .
 ```
 ## To run carlasim
 ```sh
 # To run the container (add sudo if needed)
 # there is an empty scripts folder if you want to mount it to a local folder by adding the following flag before --name flag
 #            -v <folder/on/your/local/machine:/home/carla/scripts>
-$ docker run --privileged --gpus all --net=host -it -e DISPLAY=$DISPLAY --name carla_with_scenariorunner carladockertest:withscenariorunner
+$ docker run --privileged --gpus all --net=host -it -e DISPLAY=$DISPLAY --name carla carladockertest:latest
 
 # To run Carla 0.9.12 (Within the Container ofc)
 $ ./CarlaUE4.sh
 
 # to open another shell for the same container (to run scripts, etc...)
-$ docker exec -it carla_with_scenariorunner bash
+$ docker exec -it carla bash
 
 ```
 ## To test scenario runner
