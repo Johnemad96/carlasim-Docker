@@ -108,3 +108,8 @@ getting the following error "Traceback (most recent call last): File "manual_con
 When running manual_control.py, but the one inside the scenario runner folder
 
 https://github.com/carla-simulator/scenario_runner/issues/717#issuecomment-800070859
+
+
+### Other Issues
+#### Matplotlib plotting windows (plot/draw/scatter) haults/blocks the rest of the code
+https://stackoverflow.com/a/15720891/9593159
