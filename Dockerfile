@@ -66,6 +66,7 @@ RUN pip3 install matplotlib scipy
 RUN pip3 install -U pip
 RUN pip3 install -U setuptools
 RUN pip3 install opencv-python
+RUN pip3 install --no-input pandas
 # RUN pip3 install pytk
 # RUN pip install pyqt5
 RUN DEBIAN_FRONTEND=noninteractive apt-get install python3-tk -y
